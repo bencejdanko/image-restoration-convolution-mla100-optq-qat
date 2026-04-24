@@ -2,6 +2,8 @@
 
 We train and evaluate image restoration models, preserving maximum fidelity of the original FP16 weights while quantizing to INT8 to run on the Mobilint MLA100 NPU. We benchmark for PSNR differences and latency deltas.
 
+<img width="1780" height="612" alt="image" src="https://github.com/user-attachments/assets/1b8ad211-0d20-494f-998b-97c2979c317f" />
+
 ## Final Results
 
 | Model | Parameters | FP PSNR gain | INT8 PSNR Gain | CPU (Intel AI Boost) Latency | NPU (MLA100) Latency  | quantization_mode | quantization_method | quantization_output  | percentile |
@@ -13,9 +15,11 @@ We train and evaluate image restoration models, preserving maximum fidelity of t
 
 1. Set with OPTQ and quantization-aware-training (4 epochs)
 
-All gains from a baseline of 23.13 dB.
+All gains from a baseline of 23.13 dB. An improvement of at least +1.05 +/- 0.05 is satisfactory for this dataset.
 
-An improvement of at least +1.05 +/- 0.05 is satisfactory for this dataset.
+The training and validation set can be found on huggingface, at https://huggingface.co/datasets/bdanko/image-restoration-v2.
+
+Models may be found at https://huggingface.co/bdanko/image-restoration and https://huggingface.co/bdanko/image-restoration-low-latency.
 
 ## Findings
 
