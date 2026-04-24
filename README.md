@@ -10,10 +10,11 @@ We train and evaluate image restoration models, preserving maximum fidelity of t
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | -- |
 | ResNet | 10.71M | +1.10 | +1.07 | 1970.19ms | 418.43ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 | 
 | ConvNet | 0.19M | +0.94 | +0.91 | 26.76ms | 5.49ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 | 
-| ConvNet-v2 | 0.19M | +0.91 | +0.63 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
+| ConvNet-v2[^2] | 0.19M | +0.91 | +0.63 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
 | ConvNet-v2[^1] | 0.19M | +0.91 | +0.66 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
 
-1. Set with OPTQ and quantization-aware-training (4 epochs)
+1. Set with OPTQ and quantization-aware-training (4 epochs). We saw an increase in PSNR, though when applying OPTQ and MOD on good fidelity quantization, the score actually seems to stay the same/decrease.
+2. Performance dropped significantly, but when swapped from LeakyReLU to regular ReLU, performance returned to be roughly equivalent. This was interesting, since the no-residual ConvNet did not have this issue.
 
 All gains from a baseline of 23.13 dB. An improvement of at least +1.05 +/- 0.05 is satisfactory for this dataset.
 
