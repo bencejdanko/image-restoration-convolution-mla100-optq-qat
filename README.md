@@ -12,7 +12,7 @@ We train and evaluate image restoration models, preserving maximum fidelity of t
 | Convolutional Network | 0.19M | +0.94 | +0.91 | 26.76ms | 5.49ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 | 
 | Convolutional Network v2[^2] | 0.19M | +0.91 | +0.63 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
 | Convolutional Network v2[^1] | 0.19M | +0.91 | +0.66 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
-| Convolutional Network v3[^1] | 0.19M | +0.94 | +0.91 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
+| Convolutional Network v3[^1] | 0.19M | +0.96 | +0.93 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
 
 
 1. Set with OPTQ and quantization-aware-training (4 epochs). We saw an increase in PSNR, though when applying OPTQ and MOD on good fidelity quantization, the score actually seems to stay the same/decrease.
