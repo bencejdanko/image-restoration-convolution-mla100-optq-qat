@@ -2,7 +2,7 @@
 
 We train and evaluate image restoration models, preserving maximum fidelity of the original FP16 weights while quantizing to INT8 to run on the Mobilint MLA100 NPU. We benchmark for PSNR differences and latency deltas.
 
-<img width="1780" height="612" alt="image" src="https://github.com/user-attachments/assets/1b8ad211-0d20-494f-998b-97c2979c317f" />
+<img width="1780" height="612" alt="image" src="https://github.com/user-attachments/assets/6f734a3c-8680-4c08-b225-000f1076467e" />
 
 ## Final Results
 
