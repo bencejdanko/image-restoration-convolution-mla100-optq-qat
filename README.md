@@ -12,12 +12,14 @@ We train and evaluate image restoration models, preserving maximum fidelity of t
 | Convolutional Network | 0.19M | +0.94 | +0.91 | 26.76ms | 5.49ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 | 
 | Convolutional Network v2[^2] | 0.19M | +0.91 | +0.63 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
 | Convolutional Network v2[^1] | 0.19M | +0.91 | +0.66 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
-| Convolutional Network v3[^1] | 0.19M | +0.96 | +0.93 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
+| Convolutional Network v3[^3] | 0.19M | +0.96 | +0.93 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
+| Convolutional Network v4[^4] | 0.37M | +1.05 |  |  |  | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
 
 
 1. Set with OPTQ and quantization-aware-training (4 epochs). We saw an increase in PSNR, though when applying OPTQ and MOD on good fidelity quantization, the score actually seems to stay the same/decrease.
 2. Performance dropped significantly, but when swapped from LeakyReLU to regular ReLU, performance returned to be roughly equivalent. This was interesting, since the no-residual ConvNet did not have this issue.
 3. We swapped LeakyReLU activations with ReLU, recovering PSNR fidelity when converting. However, our PSNR gains still plateau just under our requirements. Observationally, it seems that 0.19M params cannot physically store all the information needed for better restoration capacity.
+4. We add residuals to our upscaling ops, and additional convolutional layers within each block after activations.
 
 All gains from a baseline of 23.13 dB. An improvement of at least +1.05 +/- 0.05 is satisfactory for this dataset.
 
