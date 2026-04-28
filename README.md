@@ -13,7 +13,7 @@ We train and evaluate image restoration models, preserving maximum fidelity of t
 | Convolutional Network v2[^2] | 0.19M | +0.91 | +0.63 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
 | Convolutional Network v2[^1] | 0.19M | +0.91 | +0.66 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
 | Convolutional Network v3[^3] | 0.19M | +0.96 | +0.93 | 10.39ms | 5.68ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
-| Convolutional Network v4[^4] | 0.37M | +1.05 |  |  |  | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
+| Convolutional Network v4[^4] | 0.37M | +1.05 | +1.03 | 24.37ms | 7.09ms | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
 | Convolutional Network v5[^5] | 0.34M | +0.98 |  |  |  | maxPercentile (2) | WChAMulti (1) | Layer (0) | 0.999 |
 
 
