@@ -17,7 +17,7 @@ MXQ_PATH = hf_hub_download(repo_id=MODEL_REPO, filename="convnet-v5.mxq")
 ONNX_PATH = hf_hub_download(repo_id=MODEL_REPO, filename="convnet-v5.onnx")
 
 print(f"Loading validation set from {DATA_REPO}...")
-dataset = load_dataset(DATA_REPO, split="validation", streaming=True)
+dataset = load_dataset(DATA_REPO, split="validation")
 
 def calculate_psnr(img1, img2):
     mse = np.mean((img1 - img2) ** 2)
